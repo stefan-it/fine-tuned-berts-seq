@@ -41,7 +41,7 @@ each run.
 | BERT base, cased (Dev)   | 95.13 | 95.29 | 95.07 | 95.12 | 95.53 | 95.23
 | BERT base, cased (Test)  | 90.89 | 90.76 | 90.82 | 91.09 | 91.60 | 91.03
 | BERT large, cased (Dev)  | 95.69 | 95.47 | 95.77 | 95.86 | 95.91 | 95.74
-| BERT large, cased (Test) | 91.73 | 91.17 | 91.77 | 91.22 | 91.46 | 91.47
+| BERT large, cased (Test) | 91.73 | 91.17 | 91.77 | 91.22 | 91.46 | **91.47**
 
 Pires, Schlinger and Garrette (2019) report a F1-score of 91.07% using the
 *EN-BERT* model.
@@ -61,20 +61,14 @@ We use three BERT models:
 * German BERT (base and cased) from [here](https://deepset.ai/german-bert)
 * An own trained German BERT (base and cased), currently unreleased
 
-| Model                    | Run 1 | Run 2 | Run 3 | Run 4 | Run 5 | Avg.
-| ------------------------ | ----- | ----- | ----- | ----- | ----- | -----
-| mBERT base, cased (Dev)  | 86.04 | 85.64 | 86.04 | 85.10 | 83.16 | 85.20
-| mBERT base, cased (Test) | 83.02 | 82.80 | 82.56 | 82.21 | 82.14 | 82.55
-
-| Model                          | Run 1 | Run 2 | Run 3 | Run 4 | Run 5 | Avg.
-| -------------------------------| ----- | ----- | ----- | ----- | ----- | -----
-| German BERT base, cased (Dev)  | 87.33 | 86.34 | 87.05 | 86.52 | 86.80 | 86.81
-| German BERT base, cased (Test) | 83.84 | 83.98 | 83.62 | 83.70 | 83.37 | 83.70
-
 | Model                              | Run 1 | Run 2 | Run 3 | Run 4 | Run 5 | Avg.
 | ---------------------------------- | ----- | ----- | ----- | ----- | ----- | -----
+| mBERT base, cased (Dev)            | 86.04 | 85.64 | 86.04 | 85.10 | 83.16 | 85.20
+| mBERT base, cased (Test)           | 83.02 | 82.80 | 82.56 | 82.21 | 82.14 | 82.55
+| German BERT base, cased (Dev)      | 87.33 | 86.34 | 87.05 | 86.52 | 86.80 | 86.81
+| German BERT base, cased (Test)     | 83.84 | 83.98 | 83.62 | 83.70 | 83.37 | 83.70
 | Own German BERT base, cased (Dev)  | 86.66 | 86.75 | 87.06 | 86.61 | 87.22 | 86.86
-| Own German BERT base, cased (Test) | 84.32 | 84.47 | 84.76 | 84.38 | 84.68 | 84.52
+| Own German BERT base, cased (Test) | 84.32 | 84.47 | 84.76 | 84.38 | 84.68 | **84.52**
 
 Pires, Schlinger and Garrette (2019) report a F1-score of 82.00% for their
 fine-tuned multilingual BERT model, whereas Wu and Dredze (2019) report a
@@ -85,7 +79,7 @@ F1-score of 82.82%.
 | Model                    | Run 1 | Run 2 | Run 3 | Run 4 | Run 5 | Avg.
 | ------------------------ | ----- | ----- | ----- | ----- | ----- | -----
 | mBERT base, cased (Dev)  | 90.73 | 91.11 | 90.82 | 90.94 | 91.05 | 90.93
-| mBERT base, cased (Test) | 90.94 | 90.29 | 90.10 | 90.32 | 90.27 | 90.38
+| mBERT base, cased (Test) | 90.94 | 90.29 | 90.10 | 90.32 | 90.27 | **90.38**
 
 Pires, Schlinger and Garrette (2019) report a F1-score of 89.86% for their
 fine-tuned multilingual BERT model, whereas Wu and Dredze (2019) report a
@@ -96,7 +90,7 @@ F1-score of 90.94%.
 | Model                    | Run 1 | Run 2 | Run 3 | Run 4 | Run 5 | Avg.
 | ------------------------ | ----- | ----- | ----- | ----- | ----- | -----
 | mBERT base, cased (Dev)  | 86.50 | 86.25 | 86.44 | 86.99 | 86.70 | 86.576
-| mBERT base, cased (Test) | 87.80 | 87.93 | 87.92 | 87.00 | 87.53 | 87.636
+| mBERT base, cased (Test) | 87.80 | 87.93 | 87.92 | 87.00 | 87.53 | **87.636**
 
 Pires, Schlinger and Garrette (2019) report a F1-score of 87.18% for their
 fine-tuned multilingual BERT model, whereas Wu and Dredze (2019) report a

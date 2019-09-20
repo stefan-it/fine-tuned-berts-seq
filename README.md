@@ -32,7 +32,8 @@ same parameters as used by Pires, Schlinger and Garrette (2019).
 ## Results
 
 We report an averaged F1-score of 5 different runs. We use different seeds for
-each run.
+each run. The official CoNLL evaluation script from
+[here](https://www.clips.uantwerpen.be/conll2003/ner/bin/conlleval) is used.
 
 ### English
 
@@ -95,6 +96,32 @@ F1-score of 90.94%.
 Pires, Schlinger and Garrette (2019) report a F1-score of 87.18% for their
 fine-tuned multilingual BERT model, whereas Wu and Dredze (2019) report a
 F1-score of 87.38%.
+
+# GermEval 2014
+
+We train three models for the [GermEval 2014](https://sites.google.com/site/germeval2014ner/)
+shared task: mBERT, German BERT and our own German BERT model.
+
+**Notice**: the original dataset includes some strange character control
+sequences (all labeled with "O" tag). We remove them in a pre-processing
+step (for train/dev/test sets).
+
+## Results
+
+We report averaged F1-Score over 5 different runs (with different seeds).
+The [official evaluation script](https://sites.google.com/site/germeval2014ner/evaluation)
+is used for evaluation. We report the *Strict, Combined Evaluation (official)*
+metric here.
+
+| Model                              | Run 1 | Run 2 | Run 3 | Run 4 | Run 5 | Avg.
+| ---------------------------------- | ----- | ----- | ----- | ----- | ----- | -----
+| mBERT base, cased (Dev)            | 86.97 | 87.04 | 86.66 | 87.11 | 86.53 | 86.86
+| mBERT base, cased (Test)           | 85.90 | 86.37 | 86.47 | 86.56 | 86.00 | 86.26
+| German BERT base, cased (Dev)      |       |       |       |       |       |
+| German BERT base, cased (Test)     |       |       |       |       |       |
+| Own German BERT base, cased (Dev)  |       |       |       |       |       |
+| Own German BERT base, cased (Test) |       |       |       |       |       |
+
 
 # ToDo
 

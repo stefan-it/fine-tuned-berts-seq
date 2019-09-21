@@ -130,6 +130,6 @@ metric here.
 
 # ToDo
 
-* [ ] Upload models to Huggingface's S3
+* [ ] Release models (incl. `BertTokenizer` and `BertModel` example usage)
 * [ ] Provide more details about training parameters, and prediction script
 * [ ] Release own trained BERT models: German (cased, uncased) and Historic German (cased, uncased)

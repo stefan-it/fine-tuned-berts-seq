@@ -6,6 +6,10 @@ for sequence tagging tasks like NER or PoS tagging.
 We use the ([coming soon](https://github.com/huggingface/pytorch-transformers/pull/1275))
 fine-tuning NER example from the awesome PyTorch-Transformers repository.
 
+# Changelog
+
+* 21.09.2019: Initial release of this repo. Publicly available models are coming soon!
+
 # CoNLL datasets
 
 For NER tasks, the CoNLL 2002 and 2003 datasets are used. The following
@@ -38,7 +42,7 @@ each run. The official CoNLL evaluation script from
 ### English
 
 | Model                    | Run 1 | Run 2 | Run 3 | Run 4 | Run 5 | Avg.
-| ------------------------ | ----- | ----- | ----- | ----- | ----- | -----
+| ------------------------ | ----- | ----- | ----- | ----- | ----- | ---------
 | BERT base, cased (Dev)   | 95.13 | 95.29 | 95.07 | 95.12 | 95.53 | 95.23
 | BERT base, cased (Test)  | 90.89 | 90.76 | 90.82 | 91.09 | 91.60 | 91.03
 | BERT large, cased (Dev)  | 95.69 | 95.47 | 95.77 | 95.86 | 95.91 | 95.74
@@ -63,7 +67,7 @@ We use three BERT models:
 * An own trained German BERT (base and cased), currently unreleased
 
 | Model                              | Run 1 | Run 2 | Run 3 | Run 4 | Run 5 | Avg.
-| ---------------------------------- | ----- | ----- | ----- | ----- | ----- | -----
+| ---------------------------------- | ----- | ----- | ----- | ----- | ----- | ---------
 | mBERT base, cased (Dev)            | 86.04 | 85.64 | 86.04 | 85.10 | 83.16 | 85.20
 | mBERT base, cased (Test)           | 83.02 | 82.80 | 82.56 | 82.21 | 82.14 | 82.55
 | German BERT base, cased (Dev)      | 87.33 | 86.34 | 87.05 | 86.52 | 86.80 | 86.81
@@ -78,7 +82,7 @@ F1-score of 82.82%.
 ### Dutch
 
 | Model                    | Run 1 | Run 2 | Run 3 | Run 4 | Run 5 | Avg.
-| ------------------------ | ----- | ----- | ----- | ----- | ----- | -----
+| ------------------------ | ----- | ----- | ----- | ----- | ----- | ---------
 | mBERT base, cased (Dev)  | 90.73 | 91.11 | 90.82 | 90.94 | 91.05 | 90.93
 | mBERT base, cased (Test) | 90.94 | 90.29 | 90.10 | 90.32 | 90.27 | **90.38**
 
@@ -89,7 +93,7 @@ F1-score of 90.94%.
 ### Spanish
 
 | Model                    | Run 1 | Run 2 | Run 3 | Run 4 | Run 5 | Avg.
-| ------------------------ | ----- | ----- | ----- | ----- | ----- | -----
+| ------------------------ | ----- | ----- | ----- | ----- | ----- | ----------
 | mBERT base, cased (Dev)  | 86.50 | 86.25 | 86.44 | 86.99 | 86.70 | 86.576
 | mBERT base, cased (Test) | 87.80 | 87.93 | 87.92 | 87.00 | 87.53 | **87.636**
 
@@ -114,17 +118,17 @@ is used for evaluation. We report the *Strict, Combined Evaluation (official)*
 metric here.
 
 | Model                              | Run 1 | Run 2 | Run 3 | Run 4 | Run 5 | Avg.
-| ---------------------------------- | ----- | ----- | ----- | ----- | ----- | -----
+| ---------------------------------- | ----- | ----- | ----- | ----- | ----- | ---------
 | mBERT base, cased (Dev)            | 86.97 | 87.04 | 86.66 | 87.11 | 86.53 | 86.86
 | mBERT base, cased (Test)           | 85.90 | 86.37 | 86.47 | 86.56 | 86.00 | 86.26
-| German BERT base, cased (Dev)      |       |       |       |       |       |
-| German BERT base, cased (Test)     |       |       |       |       |       |
-| Own German BERT base, cased (Dev)  |       |       |       |       |       |
-| Own German BERT base, cased (Test) |       |       |       |       |       |
+| German BERT base, cased (Dev)      | 87.36 | 87.03 | 87.55 | 87.53 | 87.23 | 87.34
+| German BERT base, cased (Test)     | 86.35 | 86.93 | 86.71 | 86.85 | 86.23 | 86.61
+| Own German BERT base, cased (Dev)  | 87.74 | 87.7  | 87.77 | 87.96 | 88.52 | 87.94
+| Own German BERT base, cased (Test) | 86.96 | 86.85 | 87.01 | 86.89 | 86.73 | **86.89**
 
 
 # ToDo
 
 * [ ] Upload models to Huggingface's S3
-* [ ] Provide more details about training parameters
-* [ ] NER for Historic German (incl. release of "HistoBERT")
+* [ ] Provide more details about training parameters, and prediction script
+* [ ] Release own trained BERT models: German (cased, uncased) and Historic German (cased, uncased)

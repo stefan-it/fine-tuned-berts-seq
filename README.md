@@ -1,10 +1,11 @@
 # 👾 + ⚛️ Fine-tuned PyTorch-Transformers compatible BERT models for Sequence Tagging
 
-This repository contains fine-tuned PyTorch-Transformers compatible BERT models
-for sequence tagging tasks like NER or PoS tagging.
+This repository contains fine-tuned [PyTorch-Transformers](https://github.com/huggingface/pytorch-transformers)
+compatible BERT models for sequence tagging tasks like NER or PoS tagging.
 
 We use the ([coming soon](https://github.com/huggingface/pytorch-transformers/pull/1275))
-fine-tuning NER example from the awesome PyTorch-Transformers repository.
+fine-tuning NER example from the awesome [PyTorch-Transformers](https://github.com/huggingface/pytorch-transformers)
+repository.
 
 # Changelog
 
@@ -28,7 +29,7 @@ compare our models to the following two papers:
   by Pires, Schlinger and Garrette (2019)
 
 * ["Beto, Bentz, Becas: The Surprising Cross-Lingual Effectiveness of BERT"](https://arxiv.org/abs/1904.09077)
-  by Wu and Dredze
+  by Wu and Dredze (2019)
 
 ❔ We use a max. sequence length of 128 and a batch size of 32. These are the
 same parameters as used by Pires, Schlinger and Garrette (2019).
@@ -58,11 +59,11 @@ also includes an 2006 update that fixes various MISC annotations. However, it
 turns out that most papers are not using the updated 2006 version of the
 dataset. So in this experiment, we use the "old" dataset in order to achieve
 a better comparison to other papers. See a more detailed discussion about this
-dataset in [this discussion](https://github.com/zalandoresearch/flair/issues/1102).
+dataset in [here](https://github.com/zalandoresearch/flair/issues/1102).
 
 We use three BERT models:
 
-* Multilingual BERT (base and cased), so called *mBERT*
+* Multilingual BERT (base and cased), further called *mBERT*
 * German BERT (base and cased) from [here](https://deepset.ai/german-bert)
 * An own trained German BERT (base and cased), currently unreleased
 
@@ -112,7 +113,7 @@ step (for train/dev/test sets).
 
 ## Results
 
-We report averaged F1-Score over 5 different runs (with different seeds).
+We report averaged F1-score over 5 different runs (with different seeds).
 The [official evaluation script](https://sites.google.com/site/germeval2014ner/evaluation)
 is used for evaluation. We report the *Strict, Combined Evaluation (official)*
 metric here.

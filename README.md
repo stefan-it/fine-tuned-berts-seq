@@ -9,6 +9,8 @@ repository.
 
 # Changelog
 
+* 23.09.2019: PoS tagging results on
+  [German HDT](https://universaldependencies.org/treebanks/de_hdt/index.html) added
 * 21.09.2019: Initial release of this repo. Publicly available models are coming soon!
 
 # CoNLL datasets
@@ -127,6 +129,29 @@ metric here.
 | Own German BERT base, cased (Dev)  | 87.74 | 87.7  | 87.77 | 87.96 | 88.52 | 87.94
 | Own German BERT base, cased (Test) | 86.96 | 86.85 | 87.01 | 86.89 | 86.73 | **86.89**
 
+# Universal Depedencies
+
+## German HDT
+
+We train three models (mBERT, German BERT and our own German BERT model) on the
+recently released [German HDT](https://universaldependencies.org/treebanks/de_hdt/index.html)
+Universal Dependencies corpus. It contains over 200K annotated sentences,
+resulting in one of the largest UD corpora. We use the latest data from the `dev`
+branch on the German HDT
+[repository](https://github.com/UniversalDependencies/UD_German-HDT/tree/dev).
+
+### Results
+
+We report averaged accuracy over 5 different runs (with different seeds).
+
+| Model                              | Run 1 | Run 2 | Run 3 | Run 4 | Run 5 | Avg.
+| ---------------------------------- | ----- | ----- | ----- | ----- | ----- | ---------
+| mBERT base, cased (Dev)            | 98.36 | 98.35 | 98.36 | 98.36 | 98.36 | 98.35
+| mBERT base, cased (Test)           | 98.58 | 98.57 | 98.58 | 98.58 | 98.58 | **98.58**
+| German BERT base, cased (Dev)      | 98.37 | 98.37 | 98.37 | 98.39 | 98.35 | 98.37
+| German BERT base, cased (Test)     | 98.57 | 98.55 | 98.57 | 98.54 | 98.57 | 98.56
+| Own German BERT base, cased (Dev)  | 98.38 | 98.38 | 98.39 | 98.37 | 98.36 | 98.38
+| Own German BERT base, cased (Test) | 98.57 | 98.56 | 98.56 | 98.57 | 98.58 | 98.57
 
 # ToDo
 

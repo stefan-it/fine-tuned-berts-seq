@@ -1,10 +1,10 @@
-# 👾 + ⚛️ Fine-tuned PyTorch-Transformers compatible BERT models for Sequence Tagging
+# 🤗 + ⚛️ Fine-tuned Transformers compatible BERT models for Sequence Tagging
 
-This repository contains fine-tuned [PyTorch-Transformers](https://github.com/huggingface/pytorch-transformers)
+This repository contains fine-tuned [Transformers](https://github.com/huggingface/transformers)
 compatible BERT models for sequence tagging tasks like NER or PoS tagging.
 
-We use the ([coming soon](https://github.com/huggingface/pytorch-transformers/pull/1275))
-fine-tuning NER example from the awesome [PyTorch-Transformers](https://github.com/huggingface/pytorch-transformers)
+We use the ([coming soon](https://github.com/huggingface/transformers/pull/1275))
+fine-tuning NER example from the awesome [Transformers](https://github.com/huggingface/transformers)
 repository.
 
 # Changelog

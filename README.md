@@ -69,18 +69,23 @@ We use three BERT models:
 * German BERT (base and cased) from [here](https://deepset.ai/german-bert)
 * An own trained German BERT (base and cased), currently unreleased
 
-| Model                              | Run 1 | Run 2 | Run 3 | Run 4 | Run 5 | Avg.
-| ---------------------------------- | ----- | ----- | ----- | ----- | ----- | ---------
-| mBERT base, cased (Dev)            | 86.04 | 85.64 | 86.04 | 85.10 | 83.16 | 85.20
-| mBERT base, cased (Test)           | 83.02 | 82.80 | 82.56 | 82.21 | 82.14 | 82.55
-| German BERT base, cased (Dev)      | 87.33 | 86.34 | 87.05 | 86.52 | 86.80 | 86.81
-| German BERT base, cased (Test)     | 83.84 | 83.98 | 83.62 | 83.70 | 83.37 | 83.70
-| Own German BERT base, cased (Dev)  | 86.66 | 86.75 | 87.06 | 86.61 | 87.22 | 86.86
-| Own German BERT base, cased (Test) | 84.32 | 84.47 | 84.76 | 84.38 | 84.68 | **84.52**
+| Model                                | Run 1 | Run 2 | Run 3 | Run 4 | Run 5 | Avg.
+| ------------------------------------ | ----- | ----- | ----- | ----- | ----- | ---------
+| mBERT base, cased (Dev)              | 86.04 | 85.64 | 86.04 | 85.10 | 83.16 | 85.20
+| mBERT base, cased (Test)             | 83.02 | 82.80 | 82.56 | 82.21 | 82.14 | 82.55
+| German BERT base, cased (Dev)        | 87.33 | 86.34 | 87.05 | 86.52 | 86.80 | 86.81
+| German BERT base, cased (Test)       | 83.84 | 83.98 | 83.62 | 83.70 | 83.37 | 83.70
+| Own German BERT base, cased (Dev)    | 86.66 | 86.75 | 87.06 | 86.61 | 87.22 | 86.86
+| Own German BERT base, cased (Test)   | 84.32 | 84.47 | 84.76 | 84.38 | 84.68 | **84.52**
+| German DistilBERT (v0), cased (Dev)  | 86.58 | 86.43 | 86.19 | 86.60 | 86.44 | 86.45
+| German DistilBERT (v0), cased (Test) | 83.33 | 83.11 | 83.30 | 83.55 | 84.18 | 83.49
+
 
 Pires, Schlinger and Garrette (2019) report a F1-score of 82.00% for their
 fine-tuned multilingual BERT model, whereas Wu and Dredze (2019) report a
 F1-score of 82.82%.
+
+For German DistilBERT a learning rate of `6e-5` was used.
 
 ### Dutch
 
@@ -120,14 +125,18 @@ The [official evaluation script](https://sites.google.com/site/germeval2014ner/e
 is used for evaluation. We report the *Strict, Combined Evaluation (official)*
 metric here.
 
-| Model                              | Run 1 | Run 2 | Run 3 | Run 4 | Run 5 | Avg.
-| ---------------------------------- | ----- | ----- | ----- | ----- | ----- | ---------
-| mBERT base, cased (Dev)            | 86.97 | 87.04 | 86.66 | 87.11 | 86.53 | 86.86
-| mBERT base, cased (Test)           | 85.90 | 86.37 | 86.47 | 86.56 | 86.00 | 86.26
-| German BERT base, cased (Dev)      | 87.36 | 87.03 | 87.55 | 87.53 | 87.23 | 87.34
-| German BERT base, cased (Test)     | 86.35 | 86.93 | 86.71 | 86.85 | 86.23 | 86.61
-| Own German BERT base, cased (Dev)  | 87.74 | 87.7  | 87.77 | 87.96 | 88.52 | 87.94
-| Own German BERT base, cased (Test) | 86.96 | 86.85 | 87.01 | 86.89 | 86.73 | **86.89**
+| Model                                | Run 1 | Run 2 | Run 3 | Run 4 | Run 5 | Avg.
+| ------------------------------------ | ----- | ----- | ----- | ----- | ----- | ---------
+| mBERT base, cased (Dev)              | 86.97 | 87.04 | 86.66 | 87.11 | 86.53 | 86.86
+| mBERT base, cased (Test)             | 85.90 | 86.37 | 86.47 | 86.56 | 86.00 | 86.26
+| German BERT base, cased (Dev)        | 87.36 | 87.03 | 87.55 | 87.53 | 87.23 | 87.34
+| German BERT base, cased (Test)       | 86.35 | 86.93 | 86.71 | 86.85 | 86.23 | 86.61
+| Own German BERT base, cased (Dev)    | 87.74 | 87.7  | 87.77 | 87.96 | 88.52 | 87.94
+| Own German BERT base, cased (Test)   | 86.96 | 86.85 | 87.01 | 86.89 | 86.73 | **86.89**
+| German DistilBERT (v0), cased (Dev)  | 86.15 | 86.41 | 86.00 | 86.30 | 85.99 | 86.17
+| German DistilBERT (v0), cased (Test) | 85.25 | 85.34 | 85.27 | 85.21 | 85.08 | 85.23
+
+For German DistilBERT a learning rate of `6e-5` was used.
 
 # Universal Depedencies
 
@@ -157,4 +166,4 @@ We report averaged accuracy over 5 different runs (with different seeds).
 
 * [ ] Release models (incl. `BertTokenizer` and `BertModel` example usage)
 * [ ] Provide more details about training parameters, and prediction script
-* [ ] Release own trained BERT models: German (cased, uncased) and Historic German (cased, uncased)
+* [ ] Release trained BERT model: German DistilBERT

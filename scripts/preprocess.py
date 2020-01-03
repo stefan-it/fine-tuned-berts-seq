@@ -1,6 +1,6 @@
 import sys
 
-from transformers import BertTokenizer
+from transformers import AutoTokenizer
 
 dataset = sys.argv[1]
 model_name_or_path = sys.argv[2]
@@ -8,7 +8,7 @@ max_len = int(sys.argv[3])
 
 subword_len_counter = 0
 
-tokenizer = BertTokenizer.from_pretrained(model_name_or_path)
+tokenizer = AutoTokenizer.from_pretrained(model_name_or_path)
 
 with open(dataset, "rt") as f_p:
     for line in f_p:

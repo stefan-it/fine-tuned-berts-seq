@@ -162,8 +162,56 @@ We report averaged accuracy over 5 different runs (with different seeds).
 | Own German BERT base, cased (Dev)  | 98.38 | 98.38 | 98.39 | 98.37 | 98.36 | 98.38
 | Own German BERT base, cased (Test) | 98.57 | 98.56 | 98.56 | 98.57 | 98.58 | 98.57
 
+# Italian
+
+We've trained BERT models from scratch for Italian (both cased and uncased).
+
+## WikiNER
+
+The WikiNER dataset from [here](https://github.com/dice-group/FOX/tree/master/input/Wikiner)
+for Italian is pre-processed into a 80/10/10 (training, development, test) split.
+We train for 10 epochs using the default parameters from the `run_ner.py` script.
+
+### Results
+
+| Model                       | Run 1 | Run 2 | Run 3 | Run 4 | Run 5 | Avg.
+| --------------------------- | ----- | ----- | ----- | ----- | ----- | ---------
+| mBERT base, cased (Dev)     | 93.35 | 93.29 | 93.32 | 93.28 | 93.36 | 93.32
+| mBERT base, cased (Test)    | 93.39 | 93.65 | 93.63 | 93.44 | 93.54 | **93.53**
+| ItBERT base, cased (Dev)    | 93.37 | 93.26 | 93.43 | 93.23 | 93.14 | 93.29
+| ItBERT base, cased (Test)   | 93.41 | 93.46 | 93.38 | 93.53 | 93.56 | 93.47
+
+## EVALITA 2009
+
+We use the NER data provided by the [EVALITA 2009](http://www.evalita.it/2009/tasks/entity)
+shared task. We train for 20 epochs using the default parameters from the `run_ner.py` script.
+
+
+### Results
+
+| Model                       | Run 1 | Run 2 | Run 3 | Run 4 | Run 5 | Avg.
+| --------------------------- | ----- | ----- | ----- | ----- | ----- | ---------
+| mBERT base, cased (Test)    | 84.93 | 85.52 | 85.33 | 85.16 | 84.98 | 85.18
+| ItBERT base, cased (Test)   | 85.88 | 85.96 | 85.27 | 85.60 | 86.08 | **85.76**
+
+## PoSTWITA
+
+We use the dataset for the [PoSTWITA](http://www.evalita.it/2016/tasks/postwita)
+shared task to report results for PoS tagging (Twitter). The dataset is used from
+[this](https://github.com/evalita2016/data) repository. We report results both for
+cased and uncased BERT models. We train for 20 epochs using the default parameters
+from the `run_ner.py` script.
+
+| Model                       | Run 1 | Run 2 | Run 3 | Run 4 | Run 5 | Avg.
+| --------------------------- | ----- | ----- | ----- | ----- | ----- | ---------
+| mBERT base, cased (Test)    | 91.47 | 91.47 | 91.68 | 91.52 | 91.54 | 91.54
+| ItBERT base, cased (Test)   | 93.75 | 93.38 | 93.83 | 93.86 | 93.54 | **93.67**
+| mBERT base, uncased (Test)  | 91.75 | 91.97 | 91.56 | 91.98 | 91.97 | 91.85
+| ItBERT base, uncased (Test) | 93.48 | 93.73 | 93.98 | 93.46 | 93.35 | 93.60
+
 # ToDo
 
 * [ ] Release models (incl. `BertTokenizer` and `BertModel` example usage)
 * [ ] Provide more details about training parameters, and prediction script
 * [ ] Release trained BERT model: German DistilBERT
+* [ ] Add link to Italian BERT models (cased and uncased)

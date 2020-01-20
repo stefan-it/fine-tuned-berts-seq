@@ -174,12 +174,14 @@ We train for 10 epochs using the default parameters from the `run_ner.py` script
 
 ### Results
 
-| Model                       | Run 1 | Run 2 | Run 3 | Run 4 | Run 5 | Avg.
-| --------------------------- | ----- | ----- | ----- | ----- | ----- | ---------
-| mBERT base, cased (Dev)     | 93.35 | 93.29 | 93.32 | 93.28 | 93.36 | 93.32
-| mBERT base, cased (Test)    | 93.39 | 93.65 | 93.63 | 93.44 | 93.54 | **93.53**
-| ItBERT base, cased (Dev)    | 93.37 | 93.26 | 93.43 | 93.23 | 93.14 | 93.29
-| ItBERT base, cased (Test)   | 93.41 | 93.46 | 93.38 | 93.53 | 93.56 | 93.47
+| Model                         | Run 1 | Run 2 | Run 3 | Run 4 | Run 5 | Avg.
+| ----------------------------- | ----- | ----- | ----- | ----- | ----- | ---------
+| mBERT base, cased (Dev)       | 93.35 | 93.29 | 93.32 | 93.28 | 93.36 | 93.32
+| mBERT base, cased (Test)      | 93.39 | 93.65 | 93.63 | 93.44 | 93.54 | 93.53
+| ItBERT base, cased (Dev)      | 93.37 | 93.26 | 93.43 | 93.23 | 93.14 | 93.29
+| ItBERT base, cased (Test)     | 93.41 | 93.46 | 93.38 | 93.53 | 93.56 | 93.47
+| ItBERT XXL base, cased (Dev)  | 93.26 | 93.41 | 93.22 | 93.32 | 93.28 | 93.30
+| ItBERT XXL base, cased (Test) | 93.47 | 93.66 | 93.66 | 93.65 | 93.62 | **93.61**
 
 ## EVALITA 2009
 
@@ -189,10 +191,11 @@ shared task. We train for 20 epochs using the default parameters from the `run_n
 
 ### Results
 
-| Model                       | Run 1 | Run 2 | Run 3 | Run 4 | Run 5 | Avg.
-| --------------------------- | ----- | ----- | ----- | ----- | ----- | ---------
-| mBERT base, cased (Test)    | 84.93 | 85.52 | 85.33 | 85.16 | 84.98 | 85.18
-| ItBERT base, cased (Test)   | 85.88 | 85.96 | 85.27 | 85.60 | 86.08 | **85.76**
+| Model                         | Run 1 | Run 2 | Run 3 | Run 4 | Run 5 | Avg.
+| ----------------------------- | ----- | ----- | ----- | ----- | ----- | ---------
+| mBERT base, cased (Test)      | 84.93 | 85.52 | 85.33 | 85.16 | 84.98 | 85.18
+| ItBERT base, cased (Test)     | 85.88 | 85.96 | 85.27 | 85.60 | 86.08 | 85.76
+| ItBERT XXL base, cased (Test) | 88.41 | 88.06 | 88.38 | 87.70 | 88.09 | **88.13**
 
 ## PoSTWITA
 
@@ -202,12 +205,14 @@ shared task to report results for PoS tagging (Twitter). The dataset is used fro
 cased and uncased BERT models. We train for 20 epochs using the default parameters
 from the `run_ner.py` script.
 
-| Model                       | Run 1 | Run 2 | Run 3 | Run 4 | Run 5 | Avg.
-| --------------------------- | ----- | ----- | ----- | ----- | ----- | ---------
-| mBERT base, cased (Test)    | 91.47 | 91.47 | 91.68 | 91.52 | 91.54 | 91.54
-| ItBERT base, cased (Test)   | 93.75 | 93.38 | 93.83 | 93.86 | 93.54 | **93.67**
-| mBERT base, uncased (Test)  | 91.75 | 91.97 | 91.56 | 91.98 | 91.97 | 91.85
-| ItBERT base, uncased (Test) | 93.48 | 93.73 | 93.98 | 93.46 | 93.35 | 93.60
+| Model                           | Run 1 | Run 2 | Run 3 | Run 4 | Run 5 | Avg.
+| ------------------------------- | ----- | ----- | ----- | ----- | ----- | ---------
+| mBERT base, cased (Test)        | 91.47 | 91.47 | 91.68 | 91.52 | 91.54 | 91.54
+| ItBERT base, cased (Test)       | 93.75 | 93.38 | 93.83 | 93.86 | 93.54 | 93.67
+| ItBERT XXL base, cased (Test)   | 93.79 | 93.82 | 93.56 | 93.78 | 93.79 | **93.75**
+| mBERT base, uncased (Test)      | 91.75 | 91.97 | 91.56 | 91.98 | 91.97 | 91.85
+| ItBERT base, uncased (Test)     | 93.48 | 93.73 | 93.98 | 93.46 | 93.35 | 93.60
+| ItBERT XXL base, uncased (Test) | 93.68 | 93.51 | 93.83 | 93.81 | 93.51 | 93.67
 
 # ToDo
 
